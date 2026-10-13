@@ -134,6 +134,20 @@ shadowsocks=example.com:80, method=aes-128-gcm, password=pwd, obfs=ws, fast-open
 shadowsocks=example.com:80, method=aes-128-gcm, password=pwd, obfs=ws, fast-open=false, tag=无用节点2
 
 [filter_local]
+# 苹果 APNs 推送走代理（Telegram 等应用的后台通知）
+host-suffix, push.apple.com, proxy
+host-suffix, akadns.net, proxy
+host-keyword, apple.com.edgekey.net, proxy
+ip-cidr, 17.249.0.0/16, proxy
+ip-cidr, 17.252.0.0/16, proxy
+ip-cidr, 17.57.144.0/22, proxy
+ip-cidr, 17.188.0.0/18, proxy
+ip-cidr, 17.188.0.0/23, proxy
+ip6-cidr, 2620:149:a44::/48, proxy
+ip6-cidr, 2403:300:a42::/48, proxy
+ip6-cidr, 2403:300:a51::/48, proxy
+ip6-cidr, 2a01:b740:a42::/48, proxy
+
 geoip, cn, direct
 ip-cidr, 10.0.0.0/8, direct
 ip-cidr, 127.0.0.0/8, direct
